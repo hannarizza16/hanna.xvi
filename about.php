@@ -6,63 +6,73 @@ include('header.php')
 
 
 <style>
+
+
+
+.about-container {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    padding: 2rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+   /* KNOW MW MORE TEXT */
+   .about-text {
+    position: absolute;
+    left: 16vw;
+    top: 14vh;
+    color: rgb(247, 247, 116);
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
   .animation-container {
     position: relative;
-    top: -20vh;
-    left: -6vw;
+    bottom: 14vh;
+    right: 2vw;
     width: 200px;
     height: 200px;
     z-index: 2;
   }
-
   .frame {
     position: absolute;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     z-index: 2;
   }
-
+/* Image active */
   .frame.active {
     opacity: 1;
   }
-
-  .box-container {
-    /* position: relative; */
+    /* BG CONTAINER */
+  .introduction-container {
+    position: absolute;
     color: beige;
-    /* opacity: 0.5; */
-    width: 100% auto;
+    opacity: 0.5;
+    width: 95%;
     height: 50vh;
+    top: 22vh;
+    left: 3vw;
+    margin-right: 50%;
     background-color: #333;
     text-align: center;
-    /* Center the text and images */
     border-radius: 30px;
   }
-
-  .about-text {
-    color: rgb(247, 247, 116);
-    font-family: 'Poppins', sans-serif;
-    font-size: 50px;
-    font-weight: 400;
-    text-transform: uppercase;
-    padding-left: 12vw;
+  .box-xontainer {
+    display: block;
   }
 
-  .about-container {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    padding: 2rem;
-    max-width: 90%;
-    margin: 0 auto;
-    /* display: flex; */
-  }
 
-  .introduction-container {
-    position: relative;
-    top: -20vh;
-    margin: 0 5%;
-  
+
+
+  /* @media (max-width: 768px) {
+  img .frame {
+    border: 2px solid red;
+    width: 10px;
   }
+} */
 </style>
 
 <body>
@@ -76,31 +86,29 @@ include('header.php')
     <div class="about-text">
       Know me more
     </div>
-    <div class="box-container">
-      <div class="animation-container">
-        <img class="frame" src="img/1.png" alt="Frame 1">
-        <img class="frame" src="img/2.png" alt="Frame 2">
-        <!-- <img class="frame" src="img/3.png" alt="Frame 3"> -->
-        <img class="frame" src="img/4.png" alt="Frame 4">
-      </div>
+
+    <!-- Image -->
 
 
-      <div class="introduction-container text-start">
-        <div class="row row-cols-2">
-          <div class="col" style="background-color: aliceblue; color: black">Column</div>
-          <div class="col" style="background-color: brown; color: white">Column</div>
-          <div class="col" style="background-color: brown; color: white">Column</div>
-          <div class="col" style="background-color: aliceblue; color: black">Column</div>
-        </div>
-      </div>
+    <div class="animation-container">
+      <img class="frame" src="img/1.png" alt="Frame 1">
+      <img class="frame" src="img/2.png" alt="Frame 2">
+      <!-- <img class="frame" src="img/3.png" alt="Frame 3"> -->
+      <img class="frame" src="img/4.png" alt="Frame 4">
     </div>
-
-
-  </div>
   </div>
 
 
+  <div class="introduction-container text-start">
+    <div class="row row-cols-2">
+      <!-- <div class="col" style="background-color: aliceblue; color: black">Column</div>
+          <div class="col" style="background-color: brown; color: white">Column</div>
+          <div class="col" style="background-color: brown; color: white">Column</div>
+          <div class="col" style="background-color: aliceblue; color: black">Column</div> -->
+    </div>
+  </div>
 
+  <!-- ACTIVE PICTURE -->
   <script>
     const frames = document.querySelectorAll('.frame');
     let currentIndex = 0;

@@ -1,3 +1,8 @@
+/* ::selection{
+  background-color: yellow;
+} */
+
+
 body {
   width: 100%;
   height: 100vh;
@@ -15,16 +20,13 @@ canvas {
   height: 100%;
 }
 
-
 img{
   width: 30%; /* Default size for larger screens */
   height: 96%;
   /* display: block; */
   float: inline-end;
   /* margin-top: 1%; */
-  
 }
-
 /* Small Screens (phones / small tablets) */
 @media (max-width: 768px) {
   img {
@@ -57,8 +59,6 @@ img{
     height: 96%;
   }
 }
-
-
 
 .custom-header-font{
   font-family: cursive;
@@ -192,10 +192,6 @@ img{
   50% {opacity: 0;}
 }
 
-
-
-
-
 @media (max-width: 740px) {
   .name-container {
     display: flex;
@@ -301,12 +297,6 @@ img{
    width: auto; /*this automatically move the width*/
   }
 }
-
-
-
-
-
-
 
 .footer-bg{
   position: fixed;
