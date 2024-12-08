@@ -6,18 +6,13 @@ include('header.php')
 
 
 <style>
-
-
-
 .about-container {
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    padding: 2rem;
+  position: relative;
+  bottom: 10vh;
     max-width: 90%;
-    margin: 0 auto;
+    margin: 0;
   }
-   /* KNOW MW MORE TEXT */
+   /* KNOW ME MORE TEXT */
    .about-text {
     position: absolute;
     left: 16vw;
@@ -27,14 +22,14 @@ include('header.php')
     font-size: 50px;
     font-weight: 400;
     text-transform: uppercase;
+    margin: 0;
   }
   .animation-container {
-    position: relative;
-    bottom: 14vh;
-    right: 2vw;
+    position: absolute;
+    top: 0;
+    left: 5vw;
     width: 200px;
     height: 200px;
-    z-index: 2;
   }
   .frame {
     position: absolute;
@@ -55,9 +50,8 @@ include('header.php')
     height: 50vh;
     top: 22vh;
     left: 3vw;
-    margin-right: 50%;
+    padding: 40px 20px 20px 20px;
     background-color: #333;
-    text-align: center;
     border-radius: 30px;
   }
   .box-xontainer {
@@ -67,12 +61,12 @@ include('header.php')
 
 
 
-  /* @media (max-width: 768px) {
-  img .frame {
-    border: 2px solid red;
-    width: 10px;
+  @media (max-width: 768px) {
+.frame {
+  display: none;
+
   }
-} */
+}
 </style>
 
 <body>
@@ -99,14 +93,13 @@ include('header.php')
   </div>
 
 
-  <div class="introduction-container text-start">
-    <div class="row row-cols-2">
-      <!-- <div class="col" style="background-color: aliceblue; color: black">Column</div>
-          <div class="col" style="background-color: brown; color: white">Column</div>
-          <div class="col" style="background-color: brown; color: white">Column</div>
-          <div class="col" style="background-color: aliceblue; color: black">Column</div> -->
-    </div>
+  <div class="introduction-container">
+    <div>
+      <div class="text-xxl-center "><h1>Hanna</h1></div>
   </div>
+  </div>
+
+
 
   <!-- ACTIVE PICTURE -->
   <script>
