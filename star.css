@@ -1,0 +1,323 @@
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-image: radial-gradient(
+      circle at top right,
+      rgba(121, 68, 154, 0.13),
+      transparent
+    ),
+    radial-gradient(circle at 20% 80%, rgba(41, 196, 255, 0.13), transparent);
+}
+canvas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+
+img{
+  width: 30%; /* Default size for larger screens */
+  height: 96%;
+  /* display: block; */
+  float: inline-end;
+  /* margin-top: 1%; */
+  
+}
+
+/* Small Screens (phones / small tablets) */
+@media (max-width: 768px) {
+  img {
+    display: none;
+    /* width: 20;
+    height: auto; */
+  }
+}
+
+/* Medium Screens (tablets) */
+@media (max-width: 992px) {
+  img {
+    width: auto;
+    height: 96%;
+  }
+}
+
+/* Large Screens (desktops) */
+@media (min-width: 992px){
+  img {
+    width: auto;
+    height: 96%;
+  }
+}
+
+/* Extra Large Screens (large desktops) */
+@media (min-width: 1200px)  {
+  img {
+    width: auto; /* Default size for larger screens */
+    height: 96%;
+  }
+}
+
+
+
+.custom-header-font{
+  font-family: cursive;
+  font-size:x-large;
+}
+
+.nav-line .nav-link {
+  font-weight: 600; /* Applies fw-semibold effect */
+  font-size: 1.1em; /* Optional: larger font size */
+  position: relative; /* Necessary for positioning the underline */
+  text-decoration: none; /* Remove default underline */
+  padding-bottom: 2px;
+  display: inline-block;
+}
+
+.nav-line .nav-link::after {
+  content: ""; /* Pseudo-element to create the line */
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Positioning the line just below the text */
+  width: 50%; /* line width */
+  height: 3px; /* Thickness of the underline */
+  border-radius: 10px;
+  background-color:#ece1b4 ; /* Set your desired color here underline color */
+  /* #e343ff  */
+
+  /* background-color: currentColor; Inherit color from the link */
+  transform: scaleX(1); /* Initially hide the line  0-invisible 1-not*/
+  transform-origin: left;
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.nav-line .nav-link:hover::after {
+  transform: scaleX(2); /* Show the line on hover it will make it longer*/
+  /* transform: scaleX(0); Show the line on hover it will make it shorter */
+}
+
+.navbar-brand {
+  font-family: 'Poppins', sans-serif; /* Apply the Google font */
+  font-size: 2rem;
+  font-weight: 400; /* Adjust weight */
+  color: white; /*hannaxvi*/
+}
+
+.highlight{
+  color:rgb(247, 247, 116);
+  /* #ece1b4 */
+  margin: 0px 10px; /*top/bottom - left/right*/
+}
+.white-highlight{
+  color: white;
+}
+
+
+
+.front-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  font-weight:400;
+  text-transform: uppercase;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  min-height: 60vh; /* Ensure div takes at least full viewport height */
+  display: flex; /* this is the reason why it adopt smoothly in screen size*/
+  margin-left: 7%;
+  justify-content: left;
+  align-items: center;
+}
+
+
+/* SCROLLBAR */
+
+
+::-webkit-scrollbar{
+  width: 7px;
+  height:4px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(#ece1b4, rgb(247, 247, 116));
+  border-radius: 10px;
+}
+
+
+
+.navbar-nav .nav-link:hover{
+  color: #ece1b4;
+}
+
+.nav-link.active{
+  color:white;
+}
+
+
+
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding: 2rem;
+  max-width: 90%;
+  margin: 0 auto;
+  /* display: flex; */
+}
+
+
+/* TYPING WORD */
+.typing-container{
+  font-size: 2em;
+  font-family: 'Poppins', sans-serif;
+  color:  rgb(247, 247, 116);
+  margin-left: 90px;
+  width: auto;
+  position:relative; /* allows you to adjust from its original position*/
+  top: -200px;
+  display: flex;
+  justify-content: left;
+
+  /* padding-bottom: 100%; */
+}
+
+#typing-text::after{
+  content: '|';
+  animation: blink 0.7s steps(2) infinite;
+}
+
+@keyframes blink{
+  0%, 100% {opacity: 1;}
+  50% {opacity: 0;}
+}
+
+
+
+
+
+@media (max-width: 740px) {
+  .name-container {
+    display: flex;
+    flex-direction: column; /* Stacks the items vertically*/
+    align-items: flex-start; /* Aligns items to the left*/
+    padding-left: 10px;
+  }
+  .front-name {
+    position: relative;
+    text-align: start;
+  }
+  .typing-container {
+  text-align: start;
+   margin-left: 9px;
+   width: auto; /*this automatically move the width*/
+  }
+}
+
+@media (min-width: 768px) {
+  .name-container {
+    display: flex;
+    flex-direction: column; /* Stacks the items vertically*/
+    align-items: flex-start; /* Aligns items to the left*/
+    padding-left: 50px;
+  }
+  .front-name {
+    position: relative;
+    text-align: start;
+  }
+  .typing-container {
+  text-align: start;
+  margin-top: 2.5em;
+   margin-left: 9px;
+   width: auto; /*this automatically move the width*/
+  }
+}
+
+@media (min-width: 800px) {
+  .name-container {
+    display: flex;
+    flex-direction: column; /* Stacks the items vertically */
+    align-items: flex-start; /* Aligns items to the left */
+    position: relative;
+  }
+  .front-name {
+    position: relative;
+    text-align: start;
+    margin-left: 0;
+  }
+  .typing-container {
+  font-size: 30px;
+  text-align: start;
+  position: relative;
+  margin-top: 3em;
+   margin-left: 9px;
+   width: auto; /*this automatically move the width*/
+  }
+}
+
+
+@media (min-width: 900px) {
+  .name-container {
+    display: flex;
+    flex-direction: column; /* Stacks the items vertically */
+    align-items: flex-start; /* Aligns items to the left */
+    position: relative;
+  }
+  .front-name {
+    position: relative;
+    text-align: start;
+    margin-left: 0;
+  }
+  .typing-container {
+  font-size: 30px;
+  text-align: start;
+  position: relative;
+  margin-top: 1em;
+   margin-left: 9px;
+   width: auto; /*this automatically move the width*/
+  }
+}
+
+@media (max-width: 1200px) {
+  .name-container {
+    display: flex;
+    flex-direction: column; /* Stacks the items vertically */
+    align-items: flex-start; /* Aligns items to the left */
+    position: relative;
+  }
+  .front-name {
+    position: relative;
+    font-size: 50px;
+    text-align: start;
+    top: -50px;
+    margin-left: 0;
+  }
+  .typing-container {
+  font-size: 30px;
+  text-align: start;
+  position: relative;
+   top: -px;
+   margin-left: 9px;
+   width: auto; /*this automatically move the width*/
+  }
+}
+
+
+
+
+
+
+
+.footer-bg{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Black with 80% opacity */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #ffffff;
+  text-align: center;
+  z-index: 1030; 
+}
+
+
