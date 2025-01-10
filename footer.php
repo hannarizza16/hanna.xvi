@@ -1,8 +1,4 @@
-<style>
-  a.text-white:hover{
-  color: rgb(247, 247, 116) !important; 
-} 
-</style>
+x`
 
 <div class="footer-bg">
   <p>&copy; 2024 Hanna Rizza Malana | All Rights Reserved</p>
