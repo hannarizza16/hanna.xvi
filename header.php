@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="star.css">
     <link rel="stylesheet" href="font.html">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
 
 </head>
 <body>
