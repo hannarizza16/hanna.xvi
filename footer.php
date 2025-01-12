@@ -1,4 +1,4 @@
-x`
+
 
 <div class="footer-bg">
   <p>&copy; 2024 Hanna Rizza Malana | All Rights Reserved</p>
